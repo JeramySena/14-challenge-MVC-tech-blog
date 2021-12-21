@@ -1,0 +1,26 @@
+{
+  "name": "14-challenge-mvc-tech-blog",
+  "version": "1.0.0",
+  "description": "AS A developer who writes about tech\r I WANT a CMS-style blog site\r SO THAT I can publish articles, blog posts, and my thoughts and opinions",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeramySena/14-challenge-MVC-tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeramySena/14-challenge-MVC-tech-blog/issues"
+  },
+  "homepage": "https://github.com/JeramySena/14-challenge-MVC-tech-blog#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.1"
+  }
+}
