@@ -5,11 +5,12 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
   console.log("======================");
-  Post.findAll({
+  Post.findAll(
+    {
     attributes: [
       'id',
-      'post_url',
       'title',
+      'content',
       'created_at',
     ],
     order: [
@@ -45,8 +46,8 @@ router.get("/:id", (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
       "title",
+      "content",
       "created_at",
     ],    
     include: [      
@@ -118,7 +119,8 @@ router.put("/:id", withAuth, (req, res) => {
 
 router.delete("/:id", withAuth, (req, res) => {
   console.log('id', req.params.id);
-  Post.destroy({
+  Post.destroy(
+    {
     where: {
       id: req.params.id,
     },
