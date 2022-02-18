@@ -51,10 +51,14 @@ router.get("/edit/:id", withAuth, (req, res) => {
           attributes: ["username"],
         },
       },
+      {
+        model: User,
+        attributes: ["username"],
+      },
     ],
   })
     .then((dbPostData) => {
-      if (!dbPostData) {
+      if (dbPostData) {
         res.status(404).json({ message: "No post found with this id" });
         return;
       }
@@ -67,7 +71,9 @@ router.get("/edit/:id", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
-router.get("/new", (req, res) => {
-  res.render("new-post");
+
+router.get("/post", (req, res) => {
+  res.render("add-post");
 });
+
 module.exports = router;
